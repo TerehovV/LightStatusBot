@@ -29,4 +29,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    bot.polling(none_stop=True, port=8080)
+    bot.polling(none_stop=True)
