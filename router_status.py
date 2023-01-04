@@ -11,7 +11,7 @@ def ping(ip, packets=1, timeout=1000):
                                 stderr=subprocess.DEVNULL, creationflags=0x08000000)
         return result.returncode == 0 and b'TTL=' in result.stdout
     else:
-        command = ['ping', '-c', str(packets), '-w', str(timeout), ip]
+        command = f"'ping' '-c 1' 'str(f{packets})' '-w' 'str(f{timeout})' 'f{ip}'"
         # run parameters: discard output and error messages
         result = subprocess.run(command,
                                 stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
