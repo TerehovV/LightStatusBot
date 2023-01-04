@@ -1,5 +1,3 @@
-from router_status import ping
-from key import ip
 
 class RingBuffer:
     def __init__(self, size):
