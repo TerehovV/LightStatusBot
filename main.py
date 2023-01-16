@@ -20,8 +20,6 @@ def main():
             bot.send_message(chat_id=CHANNEL_NAME, text=light_on_message())
         elif session == status_off:
             bot.send_message(chat_id=CHANNEL_NAME, text=light_off_message())
-        else:
-            pass
     else:
         pass
     status[:] = session[:]
